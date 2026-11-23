@@ -1,4 +1,6 @@
-# Elsewhen
+# SigmaOS elsewhen
+
+> Forked from omacom/elsewhen (MIT). See `SIGMAOS_FORK.md`.
 
 A world clock for the Omarchy shell: a globe in the bar that opens a panel of
 clocks, one row per city, with a spinnable globe behind it.
