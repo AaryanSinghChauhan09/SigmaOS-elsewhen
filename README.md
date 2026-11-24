@@ -1307,3 +1307,8 @@ dispatching the workflow again with the same version stops at the
 tag-already-exists check, and bumping past it would leave the first version
 unpublished. The repository has to be public before `omarchy-pkgs` can fetch
 the archive at all.
+## Documentation
+
+Wiki documentation is available in the SigmaOS Wiki Staging repository:
+
+- [SigmaOS Wiki Staging](https://github.com/AaryanSinghChauhan09/sigmaos-wiki-staging#SigmaOS-elsewhen) - Full Wiki documentation for all SigmaOS components
