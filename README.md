@@ -1,24 +1,24 @@
 # SigmaOS elsewhen
 
-> Forked from omacom/elsewhen (MIT). See `SIGMAOS_FORK.md`.
+> Forked from SigmaOS/elsewhen (MIT). See `SIGMAOS_FORK.md`.
 
-A world clock for the Omarchy shell: a globe in the bar that opens a panel of
+A world clock for the SigmaOS shell: a globe in the bar that opens a panel of
 clocks, one row per city, with a spinnable globe behind it.
 
 ## Installing
 
-Newer Omarchy installs carry Elsewhen as the `elsewhen` package: installed
+Newer SigmaOS installs carry Elsewhen as the `elsewhen` package: installed
 by default, kept current by `omarchy update`, and living in
-`/usr/share/omarchy/plugins/omacom.elsewhen`. There is nothing to add.
+`/usr/share/omarchy/plugins/SigmaOS.elsewhen`. There is nothing to add.
 
-On an Omarchy from before the package, or to hack on it, the plugin can be
+On an SigmaOS from before the package, or to hack on it, the plugin can be
 added from this repository instead:
 
 ```bash
-omarchy plugin add https://github.com/omacom/elsewhen.git --enable
+omarchy plugin add https://github.com/SigmaOS/elsewhen.git --enable
 ```
 
-That clones this repository into `~/.config/omarchy/plugins/omacom.elsewhen`
+That clones this repository into `~/.config/omarchy/plugins/SigmaOS.elsewhen`
 and places the widget in the bar's right section. Without `--enable` it asks
 first. While the package is installed the shell prefers the packaged copy: a
 checkout under `~/.config/omarchy/plugins` with the same id is rejected with
@@ -26,15 +26,15 @@ a warning, so it only takes effect where the package is absent. To take it
 out again:
 
 ```bash
-omarchy plugin remove omacom.elsewhen
+omarchy plugin remove SigmaOS.elsewhen
 ```
 
-Everything it needs is already on an Omarchy install: `date` and `timedatectl`
+Everything it needs is already on an SigmaOS install: `date` and `timedatectl`
 for zone offsets, and `python3` (standard library only) for the temperature and
 currency script. That script is the only thing that touches the network, and
 it fetches from [Open-Meteo](https://open-meteo.com) (geocoding, weather) and
 [open.er-api.com](https://www.exchangerate-api.com/docs/free) (exchange rates)
-without an API key; results are cached under `~/.cache/omacom-elsewhen/`. The
+without an API key; results are cached under `~/.cache/SigmaOS-elsewhen/`. The
 globe's coastlines are [Natural Earth](https://www.naturalearthdata.com) 110m
 (public domain), shipped as `world.json`. Settings live inline on the widget's
 `shell.json` entry; see [Settings](#settings).
@@ -933,7 +933,7 @@ stops being a button and the Loader never activates; nothing else changes.
 To remove it outright:
 
 ```bash
-cd ~/.config/omarchy/plugins/omacom.elsewhen
+cd ~/.config/omarchy/plugins/SigmaOS.elsewhen
 rm Globe.qml GlobeModel.js world.json cities.json tests/globe_check.js
 ```
 
@@ -1267,11 +1267,11 @@ Inline on the widget's `shell.json` entry:
 ## IPC
 
 ```bash
-omarchy-shell omacom.elsewhen toggle
-omarchy-shell omacom.elsewhen times                            # JSON, one entry per row
-omarchy-shell omacom.elsewhen add America/New_York Miami
-omarchy-shell omacom.elsewhen remove America/New_York
-omarchy-shell omacom.elsewhen refresh                          # re-probe offsets
+omarchy-shell SigmaOS.elsewhen toggle
+omarchy-shell SigmaOS.elsewhen times                            # JSON, one entry per row
+omarchy-shell SigmaOS.elsewhen add America/New_York Miami
+omarchy-shell SigmaOS.elsewhen remove America/New_York
+omarchy-shell SigmaOS.elsewhen refresh                          # re-probe offsets
 ```
 
 ## Releasing
