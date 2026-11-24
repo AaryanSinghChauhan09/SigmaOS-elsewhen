@@ -1267,11 +1267,11 @@ Inline on the widget's `shell.json` entry:
 ## IPC
 
 ```bash
-omarchy-shell SigmaOS.elsewhen toggle
-omarchy-shell SigmaOS.elsewhen times                            # JSON, one entry per row
-omarchy-shell SigmaOS.elsewhen add America/New_York Miami
-omarchy-shell SigmaOS.elsewhen remove America/New_York
-omarchy-shell SigmaOS.elsewhen refresh                          # re-probe offsets
+sigmaos-shell SigmaOS.elsewhen toggle
+sigmaos-shell SigmaOS.elsewhen times                            # JSON, one entry per row
+sigmaos-shell SigmaOS.elsewhen add America/New_York Miami
+sigmaos-shell SigmaOS.elsewhen remove America/New_York
+sigmaos-shell SigmaOS.elsewhen refresh                          # re-probe offsets
 ```
 
 ## Releasing
@@ -1294,10 +1294,10 @@ with the workflow's own token does not start another one. It checks out the
 tag, requires its commit to be on `main` and the tag to equal `v` plus the
 manifest's version, runs the same checks again, and creates the GitHub
 release with generated notes. A version with a `-` in it is marked a
-prerelease, which `omarchy-pkgs` skips when it looks for the latest release;
+prerelease, which `sigmaos-pkgs` skips when it looks for the latest release;
 that is also why `set-version.sh` refuses a `.`-introduced suffix like
 `0.2.0.rc1`, which would slip past. Nothing is attached to the release:
-`omarchy-pkgs` builds the `elsewhen` package from the tag's source archive,
+`sigmaos-pkgs` builds the `elsewhen` package from the tag's source archive,
 so the tag is the release.
 
 Pushing a `vX.Y.Z` tag by hand skips `cut` and publishes that tag the same
@@ -1305,7 +1305,7 @@ way. If `cut` succeeds and `publish` fails, re-run the failed job of that same
 run from the Actions page; the commit and tag are already on `main`, so
 dispatching the workflow again with the same version stops at the
 tag-already-exists check, and bumping past it would leave the first version
-unpublished. The repository has to be public before `omarchy-pkgs` can fetch
+unpublished. The repository has to be public before `sigmaos-pkgs` can fetch
 the archive at all.
 ## Documentation
 
