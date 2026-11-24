@@ -18,10 +18,10 @@ added from this repository instead:
 omarchy plugin add https://github.com/SigmaOS/elsewhen.git --enable
 ```
 
-That clones this repository into `~/.config/omarchy/plugins/SigmaOS.elsewhen`
+That clones this repository into `~/.config/sigmaos/plugins/SigmaOS.elsewhen`
 and places the widget in the bar's right section. Without `--enable` it asks
 first. While the package is installed the shell prefers the packaged copy: a
-checkout under `~/.config/omarchy/plugins` with the same id is rejected with
+checkout under `~/.config/sigmaos/plugins` with the same id is rejected with
 a warning, so it only takes effect where the package is absent. To take it
 out again:
 
@@ -175,7 +175,7 @@ The `×` is placed from the corner rather than centred in its target, so how
 tucked-in it reads does not depend on how big the target is. The target itself
 is anchored flush into the corner and is larger than the mark, because a
 corner is the easiest place on a row to hit. Changes are written straight back to this widget's entry in
-`~/.config/omarchy/shell.json`, so they survive a restart.
+`~/.config/sigmaos/shell.json`, so they survive a restart.
 
 The search is rendered inline rather than in a dropdown popup on purpose: the
 shared `SearchableDropdown` only ever opens downward, and this panel hangs off
@@ -933,7 +933,7 @@ stops being a button and the Loader never activates; nothing else changes.
 To remove it outright:
 
 ```bash
-cd ~/.config/omarchy/plugins/SigmaOS.elsewhen
+cd ~/.config/sigmaos/plugins/SigmaOS.elsewhen
 rm Globe.qml GlobeModel.js world.json cities.json tests/globe_check.js
 ```
 
