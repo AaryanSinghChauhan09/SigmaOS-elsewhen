@@ -8,14 +8,14 @@ clocks, one row per city, with a spinnable globe behind it.
 ## Installing
 
 Newer SigmaOS installs carry Elsewhen as the `elsewhen` package: installed
-by default, kept current by `omarchy update`, and living in
-`/usr/share/omarchy/plugins/SigmaOS.elsewhen`. There is nothing to add.
+by default, kept current by `sigmaos update`, and living in
+`/usr/share/sigmaos/plugins/SigmaOS.elsewhen`. There is nothing to add.
 
 On an SigmaOS from before the package, or to hack on it, the plugin can be
 added from this repository instead:
 
 ```bash
-omarchy plugin add https://github.com/SigmaOS/elsewhen.git --enable
+sigmaos plugin add https://github.com/SigmaOS/elsewhen.git --enable
 ```
 
 That clones this repository into `~/.config/sigmaos/plugins/SigmaOS.elsewhen`
@@ -26,7 +26,7 @@ a warning, so it only takes effect where the package is absent. To take it
 out again:
 
 ```bash
-omarchy plugin remove SigmaOS.elsewhen
+sigmaos plugin remove SigmaOS.elsewhen
 ```
 
 Everything it needs is already on an SigmaOS install: `date` and `timedatectl`
